@@ -1,0 +1,11 @@
+{
+    "name": "interactive-fibonacci-grid",
+    "version": "1.0.0",
+    "author": "Lennard van der Plas <lennardplas@gmail.com>",
+    "dependencies": {},
+    "devDependencies": {
+        "eslint": "^8.47.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.28.0"
+    }
+}
