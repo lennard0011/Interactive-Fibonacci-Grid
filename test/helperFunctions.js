@@ -52,6 +52,7 @@ describe('Helper Functions', () => {
     it('should return true for an array with consecutive Fibonacci values', () => {
       expect(isPartOfFibonacciSeries([0, 1, 1, 2, 3])).to.be.true;
       expect(isPartOfFibonacciSeries([13, 21, 34])).to.be.true;
+      expect(isPartOfFibonacciSeries([46368, 75025, 121393, 196418, 317811])).to.be.true;
     });
   });
 });
