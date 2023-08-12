@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import Grid from './lib/classes/grid.js';
 
 const gridWidthPixels = 600;
@@ -9,7 +10,15 @@ const canvas = document.getElementById('canvas');
 const canvasContext = canvas.getContext('2d');
 canvasContext.canvas.width = gridWidthPixels;
 canvasContext.canvas.height = gridHeigthPixels;
-canvas.addEventListener('click', handleClick);
+
+const myGrid = new Grid(
+  canvas,
+  gridWidthPixels,
+  gridHeigthPixels,
+  gridNumberOfColumns,
+  gridNumberOfRows,
+  5,
+);
 
 function handleClick(e) {
   const clickX = e.offsetX;
@@ -17,5 +26,6 @@ function handleClick(e) {
   myGrid.clickCellAt(clickX, clickY);
 }
 
-const myGrid = new Grid(canvas, gridWidthPixels, gridHeigthPixels, gridNumberOfColumns, gridNumberOfRows, 5);
+canvas.addEventListener('click', handleClick);
+
 myGrid.draw();

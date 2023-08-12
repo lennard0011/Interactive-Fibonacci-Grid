@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-undef */
+/* eslint-disable import/extensions */
 import { expect } from 'chai';
 import Grid from '../lib/classes/grid.js'; // Update the path to the correct location of the Grid class
 

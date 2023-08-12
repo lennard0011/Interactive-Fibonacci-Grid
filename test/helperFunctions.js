@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-undef */
+/* eslint-disable import/extensions */
 import { expect } from 'chai';
 import { sleep, range, isPartOfFibonacciSeries } from '../lib/functions/helperFunctions.js'; // Update the path to the correct location of the helperFunctions file
 
@@ -51,6 +54,4 @@ describe('Helper Functions', () => {
       expect(isPartOfFibonacciSeries([13, 21, 34])).to.be.true;
     });
   });
-
-  // Add tests for other functions (isPerfectSquare, isFibonacciNumber, findNextFibonacci) if needed
 });

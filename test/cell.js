@@ -1,3 +1,5 @@
+/* eslint-disable import/extensions */
+/* eslint-disable no-undef */
 import { expect } from 'chai';
 import Cell from '../lib/classes/cell.js';
 
@@ -10,6 +12,7 @@ describe('Cell Class', () => {
     canvasContext = {
       fillStyle: '',
       fillRect: () => {},
+      fillText: () => {},
     };
 
     cell = new Cell(canvasContext, 10, 20, 30, 30);

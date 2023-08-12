@@ -4,7 +4,9 @@
     "author": "Lennard van der Plas <lennardplas@gmail.com>",
     "type": "module",
     "scripts": {
-        "test": "mocha"
+        "test": "mocha",
+        "posttest": "eslint .",
+        "format": "eslint --fix ."
     },
     "devDependencies": {
         "chai": "^4.3.7",
