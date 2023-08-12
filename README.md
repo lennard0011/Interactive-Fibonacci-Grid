@@ -8,6 +8,9 @@ This application presents a grid consisting of cells. All cells have a integer v
 We check if a cell is part of the Fibonacci order by testing the following formula (5x^2 + 4) or (5x^2 - 4) is a perfect square where x is the value of the cell.
 
 # How to run?
+1. Clone the repository.
+2. From the root folder, run a webserver. I recommand the VS Code extension [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+3. Open the webpage.
 
 # Architecture
 
