@@ -26,3 +26,4 @@ When the grid is clicked, it is determined which cell is clicked. Then all row a
 2. Reduce the number of ranges that need to be checked with every update.
 3. <del>Capture the edge case where if cell has its value reset to 0 due to a reset, it suddenly is part of a Fibonacci series. E.g. When we have the range [5, 1, 1, 2, 3] and the first cell with value 5 gets reset to 0, we don't check the this particular range anymore which will result in a range of [0, 1, 1, 2, 3] not being checked.</del> RESOLVED
 4. Add more tests to fortify the stability of the application.
+5. Create grid visualizer to split back-end (grid and cell logic) and front-end functionalities (html canvas visualisations).
