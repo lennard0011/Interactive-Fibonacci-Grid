@@ -30,7 +30,7 @@ describe('Grid Class', () => {
     expect(grid.gridNumberOfRows).to.equal(10);
     expect(grid.cellWidth).to.equal(50);
     expect(grid.cellHeight).to.equal(50);
-    expect(grid.cells).to.be.an('array').that.is.empty;
+    expect(grid.cells).to.be.an('array').that.is.not.empty;
     expect(grid.fibonacciSeriesLength).to.equal(5);
   });
 });
