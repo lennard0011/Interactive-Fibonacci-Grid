@@ -3,10 +3,6 @@ An interactive grid in html that reacts on fibonacci series on the values of the
 
 This application presents a grid consisting of cells. All cells have a integer value, at start their value is 0. If you click on a cell, all cells in that row and column will briefly turn yellow and have their value incremented by 1. If 5 consecutive cells with the values of the Fibonacci sequence are next to each other (horizontally), they briefly turn green and have their value reset to 0.
 
-# General idea
-
-We check if a cell is part of the Fibonacci order by testing the following formula (5x^2 + 4) or (5x^2 - 4) is a perfect square where x is the value of the cell.
-
 # How to run yourself?
 1. Clone the repository.
 2. From the root folder, run a webserver. I recommand the VS Code extension [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
@@ -21,7 +17,11 @@ We check if a cell is part of the Fibonacci order by testing the following formu
 6. Create a PR to the main branch.
 
 # Architecture
+First the grid is created with the cells and drawn on the canvas on the page. Event listeners are added to trigger updates to the grid with every click on the grid. 
 
-## Classes
+When the grid is clicked, it is determined which cell is clicked. Then all row and column neighbours of the cell are determined. The value of all these cells is increment by one. After the increment we check all ranges of cells where the updated cells are part. If a range satisfies the Fibonacci requirement, then we trigger the reset.
 
-### Cell
+# Further improvements
+1. Abstract the cell class by moving the logic of increment, reset and initialise to the cell class.
+2. Reduce the number of ranges that need to be checked with every update.
+3. Capture the edge case where if cell has its value reset to 0 due to a reset, it suddenly is part of a Fibonacci series.
