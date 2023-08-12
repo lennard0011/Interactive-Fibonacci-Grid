@@ -1,23 +1,21 @@
 /* eslint-disable import/extensions */
 import Grid from './lib/classes/grid.js';
+import configurations from './globals.js';
 
-const gridWidthPixels = 600;
-const gridHeigthPixels = 600;
-const gridNumberOfColumns = 50;
-const gridNumberOfRows = 50;
+const { gridSize, fibonacciSeriesLength } = configurations;
 
 const canvas = document.getElementById('canvas');
 const canvasContext = canvas.getContext('2d');
-canvasContext.canvas.width = gridWidthPixels;
-canvasContext.canvas.height = gridHeigthPixels;
+canvasContext.canvas.width = gridSize.gridWidthPixels;
+canvasContext.canvas.height = gridSize.gridHeigthPixels;
 
 const myGrid = new Grid(
   canvas,
-  gridWidthPixels,
-  gridHeigthPixels,
-  gridNumberOfColumns,
-  gridNumberOfRows,
-  5,
+  gridSize.gridWidthPixels,
+  gridSize.gridHeigthPixels,
+  gridSize.gridNumberOfColumns,
+  gridSize.gridNumberOfRows,
+  fibonacciSeriesLength,
 );
 
 function handleClick(e) {
